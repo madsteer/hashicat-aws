@@ -5,8 +5,19 @@
 # Terraform code. If you create a variable with no default, the user will be
 # prompted to enter it (or define it via config file or command line flags.)
 
+variable "Billable" {
+  description = "for billing"
+  default = "true"
+}
+
+variable "Department" {
+  description = "billing department"
+  default = "devops"
+}
+
 variable "prefix" {
   description = "This prefix will be included in the name of most resources."
+  default     = "madsteer-prefix"
 }
 
 variable "region" {
